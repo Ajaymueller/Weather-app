@@ -6,16 +6,16 @@ const ForecastSummary = (props) =>  {
    return (
    <div>
        <div>
-       <span className = "date">`${props.date}`</span>
+       <span className = "date">{props.date}</span>
        </div>
         <div>
-        <span className = "temperature">`${props.temperature}`</span>
+        <span className = "temperature">{props.temperature}</span>
         </div>
         <div>
-        <span className = "description">`${props.description}`</span>
+        <span className = "description">{props.description}</span>
         </div>
         <div>
-        <span className = "icon">`${props.icon}</span>
+        <span className = "icon">{props.icon}</span>
         </div>
     </div>
    );

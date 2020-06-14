@@ -4,18 +4,17 @@ import PropTypes from "prop-types";
 import LocationDetails from "./location-details";
 import ForecastSummary from "./forecast-summary";
 import { render } from "react-dom";
-
-const sayHello = () => {
-  console.log("hello");
-}
+import ForecastSummaries from "./forecast-summaries";
+import '../styles/app.css';
 
 const App = (props) => (
-  <div>
+  <div className="forecast">
  <LocationDetails
     city={props.location.city}
     country={props.location.country}
   />
-  <button onClick={sayHello}>Hello World</button>
+
+  <ForecastSummaries forecasts={props.forecasts} />
 
   </div>
 );
@@ -25,6 +24,7 @@ App.propTypes = {
     city: PropTypes.string,
     country: PropTypes.string,
   }).isRequired,
+  forecasts: PropTypes.array.isRequired,
 };
 
 export default App;
