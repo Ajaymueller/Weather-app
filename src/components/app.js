@@ -37,11 +37,14 @@ const App = () => {
     }).catch((error) => {
       alert('City could not be found!')
     })
+
+
+
   }
 
-  const handleKeyPress = (city) => {
+  const handleKeyPress = (e) => {
     if (event.key == 'Enter') {
-      searchForCity(city)
+      searchForCity(e.target.value)
     };
   };
 

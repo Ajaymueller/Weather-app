@@ -3,9 +3,9 @@
     justify-content: space-between;
     max-width: 550px;
     padding: 25px;
-    border: red 5px solid;
     border-radius: 25px;
     color:  #4CAF50;
+    font-size: large;
 }
 
 .btn2 {
