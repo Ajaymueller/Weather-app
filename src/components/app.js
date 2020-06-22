@@ -39,6 +39,13 @@ const App = () => {
     })
   }
 
+  const handleKeyPress = (city) => {
+    if (event.key == 'Enter') {
+      searchForCity(city)
+    };
+  };
+
+
   const selectedForecast = forecasts.find(forecast => forecast.date === selectedDate);
 
   const handleForecastSelector = date => {
@@ -50,7 +57,7 @@ const App = () => {
   return (
     <div className="forecast">
       <LocationDetails city={location.city} country={location.country} />
-      <SearchForm searchCity={searchForCity}/>
+      <SearchForm searchCity={searchForCity} handleKeyPress={handleKeyPress} />
       <ForecastSummaries
         forecasts={forecasts}
         onForecastSelect={handleForecastSelector}
