@@ -36,7 +36,6 @@ const App = () => {
       setLocation(res.data.location);
     }).catch((error) => {
       alert('City could not be found!')
-      console.log(error)
     })
   }
 

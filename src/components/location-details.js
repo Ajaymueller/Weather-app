@@ -1,6 +1,6 @@
-
 import React from "react";
 import PropTypes from "prop-types";
+import '../styles/location-details.css';
 
 
 const LocationDetails = (props) => (
