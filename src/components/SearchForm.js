@@ -16,7 +16,7 @@ const SearchForm = (props) => {
     return (
         <div className="searchForm">
         <span>Search for a different city here:</span><input type="text" onChange={handleInputChange} value={searchText} placeholder="Enter a town or city name" />
-        <button onClick={() => props.searchCity(searchText)} > 
+        <button className="btn2" onClick={() => props.searchCity(searchText)} > 
         Search 
         </button>
         </div>
