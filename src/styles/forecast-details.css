@@ -1,0 +1,27 @@
+.forecast-details {
+    font-weight: bold;
+    font-size: larger;
+    color: #262626;
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.max-temp {
+}
+
+.min-temp {
+}
+
+.humidity {
+}
+
+.wind-speed {
+}
+
+.wind-direction {
+}

@@ -1,4 +1,9 @@
 .forecast-summaries {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border: red 5px solid;
+    border-radius: 25px;
+    margin: 50px;
+    padding: 25px;
+
   }

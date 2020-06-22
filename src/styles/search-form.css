@@ -1,0 +1,7 @@
+.searchForm {
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px;
+    padding: 25px;
+    border: 5px;
+}

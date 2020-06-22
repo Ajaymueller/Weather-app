@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import '../styles/search-form.css';
 
 const SearchForm = (props) => {
 
@@ -13,9 +14,11 @@ const SearchForm = (props) => {
 
 
     return (
-        <div>
-        <input type="text" onChange={handleInputChange} value={searchText} placeholder="Enter a town or city name" />
-        <button onClick={() => props.searchCity(searchText)}>Search</button>
+        <div className="searchForm">
+        <span>Search for a different city here:</span><input type="text" onChange={handleInputChange} value={searchText} placeholder="Enter a town or city name" />
+        <button onClick={() => props.searchCity(searchText)} > 
+        Search 
+        </button>
         </div>
         ) 
 }

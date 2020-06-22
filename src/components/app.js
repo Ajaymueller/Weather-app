@@ -1,5 +1,4 @@
 import LocationDetails from "./location-details";
-//import { render } from "react-dom";
 import ForecastSummaries from "./forecast-summaries";
 import '../styles/app.css';
 import ForecastDetails from './ForecastDetails';
@@ -44,7 +43,9 @@ const App = () => {
   const selectedForecast = forecasts.find(forecast => forecast.date === selectedDate);
 
   const handleForecastSelector = date => {
-    setSelectedDate(date)
+    selectedDate === date ? 
+      setSelectedDate(0)
+      :setSelectedDate(date)
   }
 
   return (
@@ -55,6 +56,7 @@ const App = () => {
         forecasts={forecasts}
         onForecastSelect={handleForecastSelector}
       />
+      <br />
       {
         selectedForecast && (<ForecastDetails forecast={selectedForecast} />)
       }
