@@ -1,5 +1,5 @@
-import LocationDetails from "./location-details";
-import ForecastSummaries from "./forecast-summaries";
+import LocationDetails from "./Location-details";
+import ForecastSummaries from "./Forecast-summaries";
 import '../styles/app.css';
 import ForecastDetails from './ForecastDetails';
 import SearchForm from './SearchForm';
@@ -16,17 +16,21 @@ const App = () => {
     country: " ",
   })
 
+  const [isLoading, setLoading] = useState(false);
+
   useEffect(() => {
     axios
       .get('https://mcr-codes-weather.herokuapp.com/forecast')
       .then((res) => {
         setForecasts(res.data.forecasts);
         setLocation(res.data.location);
+        setLoading(false);
       });
   }, []);
 
   const searchForCity = (city) => {
     const query = city
+    setLoading(true);
     !query?
     alert('Please enter a city name!')
     : axios
@@ -34,16 +38,15 @@ const App = () => {
     .then((res) => {
       setForecasts(res.data.forecasts);
       setLocation(res.data.location);
+      setLoading(false);
     }).catch((error) => {
       alert('City could not be found!')
     })
 
-
-
   }
 
   const handleKeyPress = (e) => {
-    if (event.key == 'Enter') {
+    if (event.key = 'Enter') {
       searchForCity(e.target.value)
     };
   };

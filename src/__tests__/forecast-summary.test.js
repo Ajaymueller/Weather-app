@@ -1,6 +1,6 @@
 import React from "react";
 import { cleanup, render, getByTestId } from "@testing-library/react";
-import ForecastSummary from "../components/forecast-summary";
+import ForecastSummary from "../components/Forecast-summary";
 import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup);
